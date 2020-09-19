@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+Bài 3: Tạo hàm nhận vào hai tham số.
+Nếu giá trị của tham số thứ nhất lớn hơn tham số thứ hai, hiển thị hộp thoại thông báo cho người dùng.
+Nếu giá trị của tham số thứ nhất nhỏ hơn hoặc bằng tham số thứ hai, trả về tổng của hai tham số.
+    <input type="number" id="number1">
+    <input type="number" id="number2">
+    <button onclick="checkNum()">click</button>
+    <p id="result"></p>
+
+<script>
+
+    function checkNum() {
+        debugger
+        let num1 = +document.getElementById("number1").value
+        let num2 = +document.getElementById("number2").value
+        let k = compareNum(num1, num2)
+
+
+        if(k == -1){
+            document.getElementById("result").innerHTML = "first number" + "(" + num1 +")" + " is bigger than " + "second number" + "(" + num2 +")"
+        } else {
+            document.getElementById("result").innerHTML = num1 + num2
+        }
+    }
+
+    function compareNum(value1, value2){
+        if(value1 > value2){
+            return -1;
+        } else{
+            return value1 + value2
+        }
+    }
+    </script>
+</body>
+</html>

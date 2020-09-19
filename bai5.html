@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai5</title>
+</head>
+<body>
+    <p id="result"></p>
+
+    <script>
+
+        let star = ["Polaris","Aldebaran","Deneb","Vega","Altair","Dubhe","Regulus"]
+        let constellation = ["Ursa Minor","Taurus","Cygnus","Lyra","Aquila","Ursa Major","Leo"]
+        findConstellationName()
+
+        function findConstellationName(){
+            debugger
+            let a = prompt("input star name here")
+            let k = findStarName(a)
+            if(a.length !== 0) {
+                if (k === 0) {
+                    document.getElementById("result").innerHTML = constellation[star.indexOf[a]]
+                } else {
+                    document.getElementById("result").innerHTML = "there is no such star in our database"
+
+                }
+            } else {
+                document.getElementById("result").innerHTML = "please refresh the page and input a star name"
+            }
+        }
+
+
+        function findStarName(inputStar){
+            for(let i = 0;i<star.length; i++){
+                if(star[i] == inputStar){
+                    return 0
+                }
+            }
+            return 1
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+
+    <input type="number" id="myInput" oninput="addOne(this.value)" onchange="addOne(this.value)">
+
+    <p id="result"></p>
+
+    <script>
+        function addOne(inputValue){
+            debugger
+
+            if(inputValue.length == 0){
+                document.getElementById("result").innerHTML = "please input a number"
+            } else {
+                inputValue = parseFloat(inputValue)
+                inputValue += 1
+                document.getElementById("result").innerHTML = inputValue
+            }
+        }
+    </script>
+</body>
+</html>
